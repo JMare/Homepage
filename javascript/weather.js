@@ -1,10 +1,10 @@
 var key = "cfa256a72d1dd578a40187c220292d26";
-var zip = 95662;
+var zip = 3104;
 var weather = {};
 
 var constructURL = function(zipcode) {
-  return "http://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",us" + "&APPID="
-  + key + "&units=imperial";
+  return "http://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",au" + "&APPID="
+  + key + "&units=metric";
 };
 
 function testJqueryGetJSON(url) {
@@ -42,7 +42,7 @@ function pullWeather(zipcode) {
 };
 
 function displayWeather() {
-  $("#summary").text(weather.summary + ' | ' + Math.round(weather.temperature) + "°F");
+  $("#summary").text(weather.summary + ' | ' + Math.round(weather.temperature) + "°C");
 };
 
 function storeWeather() {
